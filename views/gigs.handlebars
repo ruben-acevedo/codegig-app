@@ -1,0 +1,19 @@
+<section id="gigs" class="container">
+    <h1 id="titleallgigs">All Gigs</h1>
+    {{#each gigs}}
+
+    <div class="gig">
+        <h3>{{dataValues.title}}</h3>
+        <p>{{dataValues.description}}</p>
+        <ul>
+            <li>Budget: {{dataValues.budget}}</li>
+            <li><a href="mailto:{{dataValues.contact_email}}" class="btn btn-reverse">Apply Now</a></li>
+        </ul>
+        <div class="tech">
+            <small>Technologies Needed: <span>{{dataValues.technologies}}</span></small>
+        </div>
+    </div>
+    {{else}}
+    <p>No gigs available.</p>
+    {{/each}}
+</section>
